@@ -18,5 +18,11 @@ namespace TicTacToe
                 grid[i] = ' ';
             }
         }
+
+        public void DetermineXorO()
+        {
+            Console.WriteLine("Enter X or O");
+            char entry = Convert.ToChar(Console.ReadLine());
+        }
     }
 }
