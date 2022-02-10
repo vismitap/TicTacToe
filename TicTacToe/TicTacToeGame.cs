@@ -19,10 +19,11 @@ namespace TicTacToe
             }
         }
 
-        public void DetermineXorO()
+        public char DetermineXorO()
         {
             Console.WriteLine("Enter X or O");
             char entry = Convert.ToChar(Console.ReadLine());
+            return entry;
         }
     }
 }

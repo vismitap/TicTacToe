@@ -6,27 +6,30 @@ using System.Threading.Tasks;
 
 namespace TicTacToe
 {
-    internal class Program
+    public class Program
     {
+        static char choiceXorOHuman, choiceXorOComp;
         static void Main(string[] args)
         {
             TicTacToeGame game = new TicTacToeGame();
             game.InitGrid();
-            Random random = new Random();
-            int whichPlayer = random.Next(1, 3);
 
-            switch (whichPlayer)
+            Console.WriteLine("Human is starting the Game...");
+            choiceXorOHuman = game.DetermineXorO();
+
+            switch (choiceXorOHuman)
             {
-                case 1:
-                    Console.WriteLine("Player is a human");
-                     game.DetermineXorO();
+                case 'O':
+                    choiceXorOComp = 'X';
                     break;
 
-                case 2:
-                    Console.WriteLine("Player is a computer");
-                    game.DetermineXorO();
+                case 'X':
+                    choiceXorOComp = 'O';
                     break;
 
+                default:
+                    Console.WriteLine("Enter Valid input. Either X or O");
+                    break;
             }
         }
     }
