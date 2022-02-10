@@ -11,6 +11,12 @@ namespace TicTacToe
         public void InitGrid()
         {
             Console.WriteLine("Welcome to TicTacToe");
+            char[] grid = new char[10];
+
+            for(int i=1; i<=10; i++)
+            {
+                grid[i] = ' ';
+            }
         }
     }
 }
