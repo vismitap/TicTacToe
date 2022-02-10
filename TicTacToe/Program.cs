@@ -12,18 +12,18 @@ namespace TicTacToe
         {
             TicTacToeGame game = new TicTacToeGame();
             game.InitGrid();
-            Console.WriteLine("Enter\n" +
-                "1: If you are a player\n" +
-                "2: If you are a computer\n");
-            int whichPlayer = Convert.ToInt32(Console.ReadLine());
+            Random random = new Random();
+            int whichPlayer = random.Next(1, 3);
 
             switch (whichPlayer)
             {
                 case 1:
+                    Console.WriteLine("Player is a human");
                      game.DetermineXorO();
                     break;
 
                 case 2:
+                    Console.WriteLine("Player is a computer");
                     game.DetermineXorO();
                     break;
 
